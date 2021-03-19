@@ -5,7 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.annotation.GlideModule
+import com.bumptech.glide.module.AppGlideModule
+import com.bumptech.glide.request.RequestOptions
+
 
 class miAdaptador(contexto:Context):BaseAdapter() {
 
@@ -25,9 +31,28 @@ class miAdaptador(contexto:Context):BaseAdapter() {
 
         return listRowLayout*/
 
-        val texto = TextView(miContexto)
-        texto.text = "Me encontré el fortnite y lo juego todo el día $position"
-        return texto
+        /*val texto = TextView(miContexto)
+        texto.text = "Holaaaa $position"
+        return texto*/
+
+        val layoutInflater = LayoutInflater.from(miContexto)
+        val listRowLayout = layoutInflater.inflate(R.layout.fila_lista,viewGroup, false)
+        val txtDescripcion = listRowLayout.findViewById<TextView>(R.id.txt_descripcion)
+        val imgPhoto = listRowLayout.findViewById<ImageView>(R.id.imageView)
+
+        txtDescripcion.text = "Hola soy la fila # $position"
+        Glide.with(miContexto)
+                .load("https://openweathermap.org/img/wn/04n@2x.png")
+                .apply(RequestOptions()
+                        .override(200,200))
+                .centerCrop()
+                .into(imgPhoto)
+
+        
+        return listRowLayout
+
+
+
     }
 
 
