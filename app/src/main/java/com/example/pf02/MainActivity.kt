@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        //val miTexto = findViewById<TextView>(R.id.txtTitulo)
+        /////////val miTexto = findViewById<TextView>(R.id.txtTitulo)
         //miTexto.text = "Daniel Pale Parra"
 
         //val miLista = findViewById<ListView>(R.id.listaItems)
