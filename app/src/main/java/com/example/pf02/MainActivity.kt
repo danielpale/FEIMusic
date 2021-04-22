@@ -10,10 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val miTexto = findViewById<TextView>(R.id.txtTitulo)
-        miTexto.text = "Daniel Pale Parra"
 
-        val miLista = findViewById<ListView>(R.id.listaItems)
-        miLista.adapter = miAdaptador(this)
+        //val miTexto = findViewById<TextView>(R.id.txtTitulo)
+        //miTexto.text = "Daniel Pale Parra"
+
+        //val miLista = findViewById<ListView>(R.id.listaItems)
+        //miLista.adapter = miAdaptador(this)
     }
 }
